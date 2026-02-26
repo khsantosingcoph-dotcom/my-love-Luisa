@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        color: #fff;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 60px 20px;
+    }
+
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-weight: 300;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    .love-box {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 30px;
+        margin: 20px auto;
+        max-width: 600px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    button {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        font-size: 18px;
+        cursor: pointer;
+        background: #fff;
+        color: #ff4b6e;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff4b6e;
+        color: #fff;
+    }
+
+    footer {
+        padding: 30px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .heart {
+        position: fixed;
+        color: red;
+        animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+        100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>To My Beautiful ❤️</h1>
+    <h2>You are my today and all of my tomorrows.</h2>
+</header>
+
+<div class="section">
+    <div class="love-box">
+        <h2>Why I Love You</h2>
+        <p>
+            I love your smile, your laugh, and the way you make my world brighter every single day.
+            You are my happiness, my peace, and my greatest adventure.
+        </p>
+    </div>
+
+    <div class="love-box">
+        <h2>Our Story</h2>
+        <p>
+            From the moment we met, I knew there was something special about you.
+            Every day with you is a blessing I cherish deeply.
+        </p>
+    </div>
+
+    <button onclick="showMessage()">Click for a Surprise 💌</button>
+    <p id="hiddenMessage" style="margin-top:20px; font-size:20px;"></p>
+</div>
+
+<footer>
+    Made with ❤️ just for you.
+</footer>
+
+<script>
+function showMessage() {
+    document.getElementById("hiddenMessage").innerHTML = 
+    "You are the best thing that ever happened to me. I love you endlessly ❤️";
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
